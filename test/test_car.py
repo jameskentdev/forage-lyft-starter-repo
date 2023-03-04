@@ -11,7 +11,7 @@ from engine.willoughby_engine import WilloughbyEngine
 class TestBatteries(unittest.TestCase):
     def test_spindler_true(self):
         battery = SpindlerBattery(
-            datetime.now() - timedelta(days=730), datetime.now())
+            datetime.now() - timedelta(days=1096), datetime.now())
 
         self.assertTrue(battery.needs_service())
 
