@@ -70,12 +70,12 @@ class TestEngines(unittest.TestCase):
 
 class TestTires(unittest.TestCase):
     def test_carrigan_true(self):
-        tire = CarriganTire()
+        tire = CarriganTire(tires=[0.91, 0.1, 0.1, 0.1])
 
         self.assertTrue(tire.needs_service())
 
     def test_carrigan_false(self):
-        tire = CarriganTire()
+        tire = CarriganTire(tires=[0.1, 0.1, 0.1, 0.1])
 
         self.assertFalse(tire.needs_service())
 
