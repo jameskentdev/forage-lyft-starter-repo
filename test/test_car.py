@@ -6,6 +6,8 @@ from battery.nubbin_battery import NubbinBattery
 from engine.capulet_engine import CapuletEngine
 from engine.sternman_engine import SternmanEngine
 from engine.willoughby_engine import WilloughbyEngine
+from tire.carrigan_tire import CarriganTire
+from tire.octoprime_tire import OctoprimeTire
 
 
 class TestBatteries(unittest.TestCase):
@@ -64,3 +66,25 @@ class TestEngines(unittest.TestCase):
         engine = SternmanEngine(False)
 
         self.assertFalse(engine.needs_service())
+
+
+class TestTires(unittest.TestCase):
+    def test_carrigan_true(self):
+        tire = CarriganTire()
+
+        self.assertTrue(tire.needs_service())
+
+    def test_carrigan_false(self):
+        tire = CarriganTire()
+
+        self.assertFalse(tire.needs_service())
+
+    def test_octoprime_true(self):
+        tire = OctoprimeTire()
+
+        self.assertTrue(tire.needs_service())
+
+    def test_octoprime_false(self):
+        tire = OctoprimeTire()
+
+        self.assertFalse(tire.needs_service())
