@@ -1,9 +1,11 @@
+from typing import List
+
 from tire.tire import Tire
 
 
 class OctoprimeTire(Tire):
-    def __init__(self):
-        pass
+    def __init__(self, tires: List[float]):
+        self.tires = tires
 
     def needs_service(self) -> bool:
-        return False
+        return sum(self.tires) >= 3.0

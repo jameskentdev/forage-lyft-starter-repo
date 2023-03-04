@@ -80,11 +80,11 @@ class TestTires(unittest.TestCase):
         self.assertFalse(tire.needs_service())
 
     def test_octoprime_true(self):
-        tire = OctoprimeTire()
+        tire = OctoprimeTire(tires=[1.0, 1.0, 1.0, 0.1])
 
         self.assertTrue(tire.needs_service())
 
     def test_octoprime_false(self):
-        tire = OctoprimeTire()
+        tire = OctoprimeTire(tires=[0.1, 0.1, 0.1, 0.1])
 
         self.assertFalse(tire.needs_service())
