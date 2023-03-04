@@ -9,6 +9,7 @@ import datetime
 
 
 class CarFactory:
+    @staticmethod
     def create_calliope(self,
                         current_date: datetime.datetime,
                         last_service_date: datetime.datetime,
@@ -22,6 +23,7 @@ class CarFactory:
 
         return Car(engine=engine, battery=battery)
 
+    @staticmethod
     def create_glissade(self,
                         current_date: datetime.datetime,
                         last_service_date: datetime.datetime,
@@ -35,6 +37,7 @@ class CarFactory:
 
         return Car(engine=engine, battery=battery)
 
+    @staticmethod
     def create_palindrome(self,
                           current_date: datetime.datetime,
                           last_service_date: datetime.datetime,
@@ -47,6 +50,7 @@ class CarFactory:
 
         return Car(engine=engine, battery=battery)
 
+    @staticmethod
     def create_rorschach(self,
                          current_date: datetime.datetime,
                          last_service_date: datetime.datetime,
@@ -60,6 +64,7 @@ class CarFactory:
 
         return Car(engine=engine, battery=battery)
 
+    @staticmethod
     def create_thovex(self,
                       current_date: datetime.datetime,
                       last_service_date: datetime.datetime,
